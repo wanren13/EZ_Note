@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioView">
+            <connections>
+                <outlet property="AudioButton" destination="Ehf-j8-e26" id="790-zT-txm"/>
+                <outlet property="AudioLabel" destination="XcY-Kg-yCs" id="but-sL-TmX"/>
+                <outlet property="progressSlider" destination="7tc-K2-Xt0" id="QgI-Zz-JER"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AudioView">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="84"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehf-j8-e26">
+                    <rect key="frame" x="24" y="31" width="81" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="72" id="jHr-wa-yDz"/>
+                        <constraint firstAttribute="height" constant="30" id="kSg-Px-msI"/>
+                    </constraints>
+                    <state key="normal" title="Play"/>
+                    <connections>
+                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="OdW-fe-bQb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcY-Kg-yCs">
+                    <rect key="frame" x="120" y="35" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7tc-K2-Xt0">
+                    <rect key="frame" x="180" y="31" width="215" height="31"/>
+                    <connections>
+                        <action selector="progressSliderMoved:" destination="-1" eventType="valueChanged" id="ajC-o0-6iC"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" red="0.88634126199999996" green="1" blue="0.78195445180000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7tc-K2-Xt0" secondAttribute="trailing" constant="23" id="6jJ-rU-4Vp"/>
+                <constraint firstItem="Ehf-j8-e26" firstAttribute="top" secondItem="XcY-Kg-yCs" secondAttribute="top" constant="-4" id="Mls-sx-ecI"/>
+                <constraint firstItem="7tc-K2-Xt0" firstAttribute="leading" secondItem="XcY-Kg-yCs" secondAttribute="trailing" constant="20" id="NuY-e2-He2"/>
+                <constraint firstItem="7tc-K2-Xt0" firstAttribute="top" secondItem="XcY-Kg-yCs" secondAttribute="top" constant="-4" id="WcR-vy-GUK"/>
+                <constraint firstAttribute="centerY" secondItem="Ehf-j8-e26" secondAttribute="centerY" id="a8H-z1-6fH"/>
+                <constraint firstItem="XcY-Kg-yCs" firstAttribute="leading" secondItem="Ehf-j8-e26" secondAttribute="trailing" constant="15" id="eFf-BU-kCw"/>
+                <constraint firstItem="Ehf-j8-e26" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="poW-IN-HtE"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="116" y="79"/>
+        </view>
+    </objects>
+</document>
